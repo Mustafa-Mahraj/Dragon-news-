@@ -15,7 +15,7 @@ const Navbar = () => {
             </ul>
             <div className='flex gap-4 items-center'>
                 <img src={userIcon} alt="" />
-                <Link to='/login'>
+                <Link to='/auth/login'>
                     <button className='btn bg-black text-white px-10'>Login</button>
                 </Link>
             </div>
