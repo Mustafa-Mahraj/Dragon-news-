@@ -1,8 +1,9 @@
 import React from 'react';
 import { FaStar, FaEye } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const News = ({ news }) => {
-    const { title, details, author, image_url, total_view, rating } = news;
+    const { title, details, author, image_url, total_view, rating, _id } = news;
     return (
         <div className="bg-white shadow-lg rounded-lg border-2 p-3">
             <div className="flex items-center mb-4 bg-gray-300 p-2">
@@ -31,8 +32,8 @@ const News = ({ news }) => {
             />
 
             <p className="text-gray-600 text-sm mb-4">
-                {details}
-                <button className="text-blue-500 font-semibold ml-1">Read More</button>
+                {details.slice(0, 200)}...
+                <Link to={`/news/${_id}`}><button className="text-blue-500 font-semibold ml-1 hover:underline">Read More</button></Link>
             </p>
 
             <div className="flex justify-between items-center px-4 py-2 border-t border-gray-200">

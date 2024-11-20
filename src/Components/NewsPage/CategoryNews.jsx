@@ -5,7 +5,6 @@ import News from './News';
 const CategoryNews = () => {
 
     const { data } = useLoaderData();
-    console.log(data)
 
     return (
         <div className='border-2 rounded-lg'>
